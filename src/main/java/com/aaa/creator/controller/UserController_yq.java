@@ -20,6 +20,7 @@ public class UserController_yq {
     @ResponseBody
     public Object addUser(String openid){
          int a = userService_yq.addUser(openid);
+        System.out.println(a);
         return a;
     }
 }
