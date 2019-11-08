@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../layui/layui.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+ <div>
+     <table class="layui-hide" id="test"></table>
+ </div>
+ <script>
+     layui.use('table', function(){
+         var table = layui.table;
+
+         table.render({
+             elem: '#test',
+             url:'findProductInfo',
+             cols: [[
+                 {field:'pid', width:'8%', title: '菜目编号'},
+                 {field:'pimage', width:'8%', title: '菜目图片'},
+                 {field:'pname',width:'8%', title: '菜目名称'},
+                 {field:'details', width:'25%', title: '菜目详情'},
+                 {field:'cost', width:'8%',title: '成本'},
+                 {field:'sname', width:'8%',title: '菜目类别'},
+                 {field:'current_price', width:'8%', title: '现价'},
+                 {field:'onum',width:'8%', title: '数量'},
+                 {field:'sales',width:'8%', title: '销量'},
+                 {field:'',width:'11%', title: '操作'}
+             ]],
+             page: true,
+             limit: 10,
+             limits: [2,4,6,8,10]
+         });
+     });
+ </script>
+</body>
+</html>
