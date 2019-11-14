@@ -5,7 +5,10 @@
 <!--<select id="selUser" resultType="User">-->
         <!--select * from user where uphone=#{uphone} and upassword=#{upassword}-->
     <!--</select>-->
-<insert id="addUser" parameterType="String">
-      insert into user(openid) values (#{openid})
+<insert id="addUser" parameterType="User">
+      insert into user(openid,uname) values (#{openid},#{uname})
     </insert>
+    <select id="selUser" resultType="int" parameterType="String">
+        select count(openid) from user where openid =#{openid}
+    </select>
 </mapper>

@@ -1,5 +1,6 @@
 package com.aaa.creator.service;
 
+import com.aaa.creator.entity.User;
 import com.aaa.creator.mapper.UserMapper_yq;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +18,12 @@ public class UserServiceImpl_yq implements UserService_yq {
 //    }
 
     @Override
-    public int addUser(String openid) {
-        return userMapper_yq.addUser(openid);
+    public int addUser(User user) {
+        return userMapper_yq.addUser(user);
+    }
+
+    @Override
+    public int selUser(String openid) {
+        return userMapper_yq.selUser(openid);
     }
 }

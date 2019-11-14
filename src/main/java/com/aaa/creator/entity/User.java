@@ -7,6 +7,15 @@ public class User {
 //    usex VARCHAR(6) not null  -- 性别
  private Integer uid;
  private String openid;
+ private String uname;
+
+    public String getUname() {
+        return uname;
+    }
+
+    public void setUname(String uname) {
+        this.uname = uname;
+    }
 
     public Integer getUid() {
         return uid;
